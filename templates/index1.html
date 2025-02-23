@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f0f4f8; }
+        .container { text-align: center; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #fff; }
+        h1 { color: #4CAF50; }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        input { width: 90%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #4CAF50; color: #fff; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="t1">Area (sq ft):
+            <input type="text" id="t1" name="t1" required></label>
+            <label for="t2">Bedrooms:
+            <input type="text" id="t2" name="t2" required></label>
+            <label for="t3">Furnishingstatus:
+            <input type="text" id="t3" name="t3"></label>
+    
+            <label for="t4">Mainroad:<input type="text" id="t4" name="t4"></label>
+    
+            <label for="t5">Parking:<input type="text" id="t5" name="t5"></label>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

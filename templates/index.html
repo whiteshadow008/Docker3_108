@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f0f4f8; }
+        .container { text-align: center; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #fff; }
+        h1 { color: #4CAF50; }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        input { width: 90%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #4CAF50; color: #fff; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="/predict" method="post">
+        <h1>CO2 EMMISION</h1>
+        <label>Enter MPG (mile per gallon)</label>
+        <input type="text" id="t1" name="t1" required>
+        <button type="submit">Predict</button>
+    </form></div>
+</body>
+</html>
