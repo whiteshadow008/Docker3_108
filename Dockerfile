@@ -1,7 +1,21 @@
-FROM python:3.7
-ENV PYTHONUNBUFFERED 1
+
+FROM python:3.8
+
+# Set environment variable
+ENV PYTHONUNBUFFERED=1
+
+# Set the working directory
 WORKDIR /app
-ADD . /app
-COPY ./requirements.txt /app/requirements.txt
+
+# Copy the requirements file and install dependencies
+COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
+
+# Copy the rest of the application files
+COPY . /app
+
+# Expose the port Flask runs on
+EXPOSE 5000
+
+# Command to run the application
+CMD ["python", "app.py"]
