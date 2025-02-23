@@ -1,9 +1,7 @@
-FROM python:3.8
-ENV PYTHONUNBUFFERED 1
-ADD . /app
+FROM python:3.7
+ENV PYTHONUNBUFFERED=1
 WORKDIR /app
-COPY requirements.txt .
+ADD . /app
+COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
-EXPOSE 5000
-CMD ["python","-m" ,"flask","app.py"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
