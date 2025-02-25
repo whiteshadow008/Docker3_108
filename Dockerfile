@@ -1,4 +1,3 @@
-
 FROM python:3.8
 
 # Set environment variable
@@ -9,7 +8,7 @@ WORKDIR /app
 
 # Copy the requirements file and install dependencies
 COPY requirements.txt /app/requirements.txt
-RUN pip install  requirements.txt
+RUN pip install -r /app/requirements.txt  # Fixed this line
 
 # Copy the rest of the application files
 COPY . /app
